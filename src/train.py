@@ -295,7 +295,7 @@ def main():
 
                 avg_loss = (avg_loss[0] * 0.99 + v_loss,
                             avg_loss[1] * 0.99 + 1.0)
-                if counter%100 = 0
+                if counter%100 == 0:
                     print(
                         '[{counter} | {time:2.2f}] loss={loss:2.2f} avg={avg:2.2f}'
                         .format(
