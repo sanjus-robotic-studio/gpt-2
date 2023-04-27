@@ -88,7 +88,7 @@ def main():
     args = parser.parse_args()
     enc = encoder.get_encoder(args.model_name, models_dir=args.models_dir)
     hparams = model.default_hparams()
-    with open(os.path.join(args.model_dir, args.model_name, 'hparams.json')) as f:
+    with open(os.path.join(args.models_dir, args.model_name, 'hparams.json')) as f:
         hparams.override_from_dict(json.load(f))
 
     if args.sample_length > hparams.n_ctx:
